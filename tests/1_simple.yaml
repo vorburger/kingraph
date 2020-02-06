@@ -7,4 +7,6 @@ families:
 people:
   Marge:
     fullname: Marjorie Bouvier Simpson
-
+    gender: f
+  Homer:
+    gender: m
