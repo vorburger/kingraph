@@ -1,0 +1,11 @@
+families:
+  - parents: [Marge, Homer]
+    children: [Bart, Lisa, Maggie]
+  - parents: [Lisa, Milhouse]
+    children: [Zia]
+
+people:
+  Marge:
+    name: Marjorie Bouvier Simpson
+    born: 1966
+    died: 1999
