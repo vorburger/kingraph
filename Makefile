@@ -25,3 +25,4 @@ test:
 	@./bin/kingraph tests/6_born2.yaml -F dot > /tmp/kingraph-test && grep 1966 /tmp/kingraph-test >/dev/null && echo "PASS 6 (CONTENT)"
 #	@./bin/kingraph tests/7_image.yaml -F svg > /tmp/kingraph-test && echo "PASS 7 (SVG)" # fixme: image not working with SVG
 	@./bin/kingraph tests/7_image.yaml -F dot > /tmp/kingraph-test && grep image2 /tmp/kingraph-test >/dev/null && echo "PASS 7 (CONTENT)"
+	@./bin/kingraph tests/8_name-all.yml -F dot | dot -Tpng > /tmp/kingraph-test && echo "PASS 8 (DOT)"
