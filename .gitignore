@@ -1,5 +1,6 @@
 node_modules
 *.dot
 .DS_Store
+tests/*.png
 
 \.idea/
