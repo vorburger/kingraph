@@ -1,0 +1,12 @@
+families:
+  - parents: [Marge, Homer]
+    children: [Bart, Lisa, Maggie]
+  - parents: [Lisa, Milhouse]
+    children: [Zia]
+
+people:
+  Marge:
+    born: 1966
+    picture: tests/7_image1.jpg
+  Homer:
+    picture: tests/7_image2.png
