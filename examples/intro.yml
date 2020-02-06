@@ -1,0 +1,37 @@
+families:
+  - house: House A
+    parents: [Parent 1, Parent 2]
+    parents2: [Parent 2, Parent 4]
+    children: [Child 1, Child 2, Child 3]
+  - house: House B
+    parents: [Parent 4, Parent 5]
+    children2: [Child 5]
+    children: [Child 6]
+    
+
+people:
+  Parent 1:
+    fullname: Parent 1 Full Name
+    name: Parent 1 Name
+    class: [died]
+    gender: m
+    born: 1904
+    died: 1999
+    picture: intro-person.png
+
+  Parent 2:
+    fullname: Parent 2 Full Name
+    name: Parent 2 Name
+    gender: f
+    born: 1909
+    picture: intro-person.jpg
+
+  Parent 4:
+    died: 1955
+    class: [died]
+
+styles:
+  died:
+    style: "filled"
+    fillcolor: "#f4f4f4"
+    penwidth: 0

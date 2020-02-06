@@ -4,10 +4,23 @@
 
 A family tree plotter with a very simple syntax. It probably doesn't cover everything [bigger tools](https://gramps-project.org/) do, but covers 90% of it for the sake of simplicity.
 
-![](docs/images/example.png)
+![](examples/intro.png) 
 
-Installation
-------------
+## Installation
+
+### Development version
+
+```sh
+
+git checkout https://github.com/AlexanderWillner/kingraph.git
+cd kingraph
+make deps
+make test
+./bin/kingraph --help
+
+```
+
+### Stable version
 
 ```sh
 npm install -g rstacruz/kingraph
