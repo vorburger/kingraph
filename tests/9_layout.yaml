@@ -1,0 +1,13 @@
+families:
+  - parents: [Marge, Homer]
+    children: [Bart]
+
+people:
+  Marge:
+    fullname: Marjorie Bouvier Simpson
+    gender: f
+    born: 1900
+    died: 1999
+    name: Marjorie
+  Homer:
+    gender: m
