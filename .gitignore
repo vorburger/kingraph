@@ -1,6 +1,8 @@
 node_modules
 *.dot
 .DS_Store
-tests/*.png
+*.yaml.png
+*.yaml.pdf
+*.yaml.svg
 
 \.idea/
