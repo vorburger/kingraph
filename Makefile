@@ -4,10 +4,19 @@ help:
 	$(info help	- show this help)
 	$(info deps	- install dependencies)
 	$(info test	- run tests)
+	$(info lint - run linter)
 	@true
 
 deps:
 	@npm install
+	@npm install -g eslint
+
+lint: lib/*.js
+#todo: fix shown issues
+	@eslint index.js
+	@for file in $^ ; do \
+		eslint "$${file}" ; \
+	done
 
 test: test-compile-to-png test-compile-to-pdf test-compile-to-svg
 #todo: real "nodeunit" tests with coverage and expectations
