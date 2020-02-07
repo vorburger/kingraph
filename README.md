@@ -1,10 +1,12 @@
 # kingraph
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 > 👪 Plots family trees using JavaScript and Graphviz
 
 A family tree plotter with a very simple syntax. It probably doesn't cover everything [bigger tools](https://gramps-project.org/) do, but covers 90% of it for the sake of simplicity.
 
-![](examples/intro.png) 
+![Example Graph](examples/intro.png)
 
 ## Installation
 
@@ -35,8 +37,7 @@ kingraph --help
 kingraph family.yml > family.svg
 ```
 
-Examples
---------
+## Examples
 
 Spoiler alerts, view at your own risk :)
 
@@ -45,7 +46,7 @@ Spoiler alerts, view at your own risk :)
 
 Source: *[simpsons.yml](examples/simpsons.yml)*
 
-> ![](examples/simpsons.png)
+> ![Simpsons Example](examples/simpsons.png)
 </details>
 
 <details>
@@ -53,7 +54,7 @@ Source: *[simpsons.yml](examples/simpsons.yml)*
 
 Source: *[modernfamily.yml](examples/modernfamily.yml)*
 
-> ![](examples/modernfamily.png)
+> ![Modern Family Example](examples/modernfamily.png)
 </details>
 
 <details>
@@ -61,7 +62,7 @@ Source: *[modernfamily.yml](examples/modernfamily.yml)*
 
 Source: *[potter.yml](examples/potter.yml)*
 
-> ![](examples/potter.png)
+> ![Potter Example](examples/potter.png)
 </details>
 
 <details>
@@ -69,11 +70,10 @@ Source: *[potter.yml](examples/potter.yml)*
 
 Source: *[got.yml](examples/got.yml)*
 
-> ![](examples/got.png)
+> ![GOT Example](examples/got.png)
 </details>
 
-Getting started
----------------
+## Getting started
 
 A family tree is a [YAML](http://yaml.org/) file.
 
@@ -99,8 +99,7 @@ kingraph family.yml -F dot > family.dot
 
 See [Getting started](docs/getting_started.md) for more!
 
-Documentation
--------------
+## Documentation
 
 For further reading:
 
@@ -110,12 +109,10 @@ For further reading:
 
 ## Thanks
 
-**kingraph** © 2016+, Rico Sta. Cruz. Released under the [MIT] License.<br>
 Authored and maintained by Rico Sta. Cruz with help from contributors ([list][contributors]).
 
 > [ricostacruz.com](http://ricostacruz.com) &nbsp;&middot;&nbsp;
 > GitHub [@rstacruz](https://github.com/rstacruz) &nbsp;&middot;&nbsp;
 > Twitter [@rstacruz](https://twitter.com/rstacruz)
 
-[MIT]: http://mit-license.org/
 [contributors]: http://github.com/rstacruz/kingraph/contributors
