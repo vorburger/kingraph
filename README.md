@@ -10,31 +10,16 @@ A family tree plotter with a very simple syntax. It probably doesn't cover every
 
 ## Installation
 
-### Development version
-
 ```sh
-
-git checkout https://github.com/AlexanderWillner/kingraph.git
-cd kingraph
-make deps
-make test
-./bin/kingraph --help
-
-```
-
-### Stable version
-
-```sh
-npm install -g rstacruz/kingraph
-# or
-yarn global add rstacruz/kingraph  # via yarnpkg.com
+npm install -g alexanderwillner/kingraph
 ```
 
 This adds the `kingraph` command to your shell.
 
 ```sh
 kingraph --help
-kingraph family.yml > family.svg
+kingraph examples/intro.yaml -F dot | dot -Tpdf -o intro.pdf
+open intro.pdf
 ```
 
 ## Examples
@@ -44,7 +29,7 @@ Spoiler alerts, view at your own risk :)
 <details>
 <summary><b>Simpsons</b> (simple)</summary>
 
-Source: *[simpsons.yml](examples/simpsons.yml)*
+Source: *[simpsons.yaml](examples/simpsons.yaml)*
 
 > ![Simpsons Example](examples/simpsons.png)
 </details>
@@ -52,7 +37,7 @@ Source: *[simpsons.yml](examples/simpsons.yml)*
 <details>
 <summary><b>Modern Family</b> (simple with houses)</summary>
 
-Source: *[modernfamily.yml](examples/modernfamily.yml)*
+Source: *[modernfamily.yaml](examples/modernfamily.yaml)*
 
 > ![Modern Family Example](examples/modernfamily.png)
 </details>
@@ -60,7 +45,7 @@ Source: *[modernfamily.yml](examples/modernfamily.yml)*
 <details>
 <summary><b>Harry Potter</b> (larger tree)</summary>
 
-Source: *[potter.yml](examples/potter.yml)*
+Source: *[potter.yaml](examples/potter.yaml)*
 
 > ![Potter Example](examples/potter.png)
 </details>
@@ -68,7 +53,7 @@ Source: *[potter.yml](examples/potter.yml)*
 <details>
 <summary><b>Game of Thrones</b> (overly complicated)</summary>
 
-Source: *[got.yml](examples/got.yml)*
+Source: *[got.yaml](examples/got.yaml)*
 
 > ![GOT Example](examples/got.png)
 </details>
@@ -92,9 +77,9 @@ people:
 kingraph can give you `svg` (default), `png` or `dot` files.
 
 ```sh
-kingraph family.yml > family.svg
-kingraph family.yml -F png > family.png
-kingraph family.yml -F dot > family.dot
+kingraph family.yaml > family.svg
+kingraph family.yaml -F png > family.png
+kingraph family.yaml -F dot > family.dot
 ```
 
 See [Getting started](docs/getting_started.md) for more!
