@@ -14,15 +14,30 @@ A family tree plotter with a very simple syntax. It probably doesn't cover every
 npm install -g alexanderwillner/kingraph
 ```
 
-This adds the `kingraph` command to your shell.
+This adds the `kingraph` command to your shell. With `kingraph --help` you can get basic information on how to execute the tool.
 
-```sh
-kingraph --help
-kingraph examples/intro.yaml -F dot | dot -Tpdf -o intro.pdf
-open intro.pdf
+## Getting started
+
+A family tree is a [YAML](http://yaml.org/) file. To get started, store the following text in a file called `family.yaml`:
+
+```yaml
+families:
+  - parents: [Marge, Homer]
+    children: [Bart, Lisa, Maggie]
+  - parents: [Lisa, Milhouse]
+    children: [Zia]
+
+people:
+  Marge:
+    fullname: Marjorie Bouvier Simpson
 ```
 
-## Examples
+```sh
+kingraph family.yaml -F dot | dot -Tpdf -o family.pdf
+open family.pdf
+```
+
+## Further Examples
 
 Spoiler alerts, view at your own risk :)
 
@@ -58,32 +73,6 @@ Source: *[got.yaml](examples/got.yaml)*
 > ![GOT Example](examples/got.png)
 </details>
 
-## Getting started
-
-A family tree is a [YAML](http://yaml.org/) file.
-
-```yaml
-families:
-  - parents: [Marge, Homer]
-    children: [Bart, Lisa, Maggie]
-  - parents: [Lisa, Milhouse]
-    children: [Zia]
-
-people:
-  Marge:
-    fullname: Marjorie Bouvier Simpson
-```
-
-kingraph can give you `svg` (default), `png` or `dot` files.
-
-```sh
-kingraph family.yaml > family.svg
-kingraph family.yaml -F png > family.png
-kingraph family.yaml -F dot > family.dot
-```
-
-See [Getting started](docs/getting_started.md) for more!
-
 ## Documentation
 
 For further reading:
@@ -94,7 +83,7 @@ For further reading:
 
 ## Thanks
 
-Authored and maintained by Rico Sta. Cruz with help from contributors ([list][contributors]).
+Authored and initially maintained by Rico Sta. Cruz with help from contributors ([list][contributors]).
 
 > [ricostacruz.com](http://ricostacruz.com) &nbsp;&middot;&nbsp;
 > GitHub [@rstacruz](https://github.com/rstacruz) &nbsp;&middot;&nbsp;
