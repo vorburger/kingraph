@@ -28,7 +28,7 @@ test: test-compile-to-png test-compile-to-pdf test-compile-to-svg
 	@./bin/kingraph tests/6_born2.yaml -F dot > /tmp/kingraph-test && grep 1966 /tmp/kingraph-test >/dev/null && echo "PASS (Search for Content 6)"
 	@./bin/kingraph tests/7_image.yaml -F dot > /tmp/kingraph-test && grep image2 /tmp/kingraph-test >/dev/null && echo "PASS (Search for Content 7)"
 
-test-compile-to-png: tests/*.yaml examples/*.yml
+test-compile-to-png: tests/*.yaml examples/*.yaml
 	@for file in $^ ; do \
 		./bin/kingraph "$${file}" -F dot | dot -Tpng -o "$${file}.png" || exit 1 ; \
 		echo "PASS (Compiling '$${file}' to PNG)" ; \
@@ -42,7 +42,7 @@ test-compile-to-png: tests/*.yaml examples/*.yml
 		fi \
 	done
 
-test-compile-to-svg: tests/*.yaml examples/*.yml
+test-compile-to-svg: tests/*.yaml examples/*.yaml
 #issue: images tag not supported by viz.js: https://github.com/mdaines/viz.js/issues/125
 #issue: warning message with modern NPM: https://github.com/mdaines/viz.js/issues/96
 #issue: links tag not supported: https://gitlab.com/graphviz/graphviz/issues/1408
@@ -55,7 +55,7 @@ test-compile-to-svg: tests/*.yaml examples/*.yml
 		fi \
 	done
 
-test-compile-to-pdf: tests/*.yaml examples/*.yml
+test-compile-to-pdf: tests/*.yaml examples/*.yaml
 	@for file in $^ ; do \
 		./bin/kingraph "$${file}" -F dot | dot -Tpdf -o "$${file}.pdf" || exit 1 ; \
 		echo "PASS (Compiling '$${file}' to PDF)" ; \

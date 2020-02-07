@@ -147,7 +147,7 @@ A list of classes for styles. These will be applied to nodes. See [styles](#styl
 
 A key-value object with `class` names as keys, and their GraphViz attributes as values. Refer to Graphviz's [attributes documentation](http://graphviz.org/doc/info/attrs.html) for attributes.
 
-```yml
+```yaml
 people:
   Ned:
     class: [deceased]

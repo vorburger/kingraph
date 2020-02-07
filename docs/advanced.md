@@ -6,7 +6,7 @@ This is the part of the API that will help deal with bigger trees.
 
 To express complex families, you can use `parents2` and `children2`. They will be drawn as dotted lines. Use this to express a different link, such as foster children or step parents.
 
-```yml
+```yaml
 families:
   - parents: [Ned, Catelyn]
     children: [Arya, Rickon, Bran, Sansa, Rob]
@@ -17,7 +17,7 @@ families:
 
 All properties in a `Family` are optional (but you have to define at least one). You can use these to show other types of relationships.
 
-```yml
+```yaml
 families:
   # These guys are having an affair of sorts
   - parents2: [Loras, Renly]
@@ -31,7 +31,7 @@ families:
 
 Use `class` and `style` to style. Refer to Graphviz's [attributes documentation](http://graphviz.org/doc/info/attrs.html) for possible attributes.
 
-```yml
+```yaml
 people:
   James:
     fullname: James Potter

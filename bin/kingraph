@@ -4,7 +4,7 @@ const all = Promise.all.bind(Promise)
 
 const cli = require('meow')(`
   Usage:
-    $ kingraph INPUT.yml
+    $ kingraph INPUT.yaml
 
   Options:
     -h, --help         show usage information

@@ -3,7 +3,7 @@ all: got.svg simpsons.svg potter.svg got.png simpsons.png potter.png modernfamil
 open: all
 	open *.svg -a "Google Chrome"
 
-%.png: %.yml
+%.png: %.yaml
 	../bin/kingraph $^ -F png > $@
-%.svg: %.yml
+%.svg: %.yaml
 	../bin/kingraph $^ -F svg > $@
