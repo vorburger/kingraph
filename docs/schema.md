@@ -115,6 +115,9 @@ people:
     fullname: Eddard Stark
     born: 1950
     died: 1966
+    picture: ned.jpg
+    links: 
+      - https://example.org
     class: [deceased]
 ```
 
@@ -129,6 +132,10 @@ A person's full name. Will be displayed in gray text.
 ### links
 
 An array of links. Use this to link to a person's Facebook account. If given, their names will be clickable.
+
+### picture
+
+A filename that contains the picture that should be shown next to the person.
 
 ### class
 
