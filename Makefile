@@ -19,7 +19,7 @@ test: test-compile-to-png
 	@./bin/kingraph tests/6_born2.yaml -F dot > /tmp/kingraph-test && grep 1966 /tmp/kingraph-test >/dev/null && echo "PASS (Search for Content 6)"
 	@./bin/kingraph tests/7_image.yaml -F dot > /tmp/kingraph-test && grep image2 /tmp/kingraph-test >/dev/null && echo "PASS (Search for Content 7)"
 
-test-compile-to-png: tests/*.yaml
+test-compile-to-png: tests/*.yaml examples/*.yml
 #todo: not all compile to SVG
 	@for file in $^ ; do \
 		./bin/kingraph $${file} -F dot | dot -Tpng -o $${file}.png ; \

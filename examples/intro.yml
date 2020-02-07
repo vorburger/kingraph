@@ -17,14 +17,14 @@ people:
     gender: m
     born: 1904
     died: 1999
-    picture: intro-person.png
+    picture: examples/intro-person.png
 
   Parent 2:
     fullname: Parent 2 Full Name
     name: Parent 2 Name
     gender: f
     born: 1909
-    picture: intro-person.jpg
+    picture: examples/intro-person.jpg
 
   Parent 4:
     died: 1955
