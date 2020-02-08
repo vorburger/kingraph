@@ -1,6 +1,11 @@
 # kingraph
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://img.shields.io/travis/AlexanderWillner/kingraph/master.svg?style=flat-square)](https://travis-ci.org/AlexanderWillner/kingraph?branch=master)
+[![codecov.io](https://img.shields.io/codecov/c/github/AlexanderWillner/kingraph/master.svg?style=flat-square)](http://codecov.io/github/AlexanderWillner/kingraph?branch=master)
+[![Code Climate](https://img.shields.io/codeclimate/maintainability/AlexanderWillner/kingraph.svg?style=flat-square)](https://codeclimate.com/github/AlexanderWillner/kingraph)
+[![devDependencies Status](https://david-dm.org/AlexanderWillner/kingraph/status.svg?style=flat-square)](https://david-dm.org/AlexanderWillner/kingraph)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/AlexanderWillner/kingraph/issues)
 
 > 👪 Plots family trees using JavaScript and Graphviz
 
