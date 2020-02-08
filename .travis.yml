@@ -1,8 +1,6 @@
 language: node_js
 node_js:
   - "node" # use latest version of node
-script:
-  - make test
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 
