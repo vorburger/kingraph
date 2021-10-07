@@ -1,38 +1,39 @@
 {
-  "name": "kingraph",
-  "description": "Plots family trees using JavaScript and Graphviz",
-  "version": "0.2.0",
-  "author": "Rico Sta. Cruz <rico@ricostacruz.com> (http://ricostacruz.com); updated by Alexander Willner (https://github.com/AlexanderWillner/kingraph)",
-  "bin": {
-    "kingraph": "bin/kingraph"
-  },
-  "dependencies": {
-    "js-yaml": "3.13.1",
-    "meow": "3.7.0",
-    "object-assign": "4.1.1",
-    "object-loops": "0.8.0",
-    "read-input": "0.3.1",
-    "strip-indent": "3.0.0",
-    "svg2png": "4.1.1",
-    "viz.js": "1.8.1"
-  },
-  "browser": {
-    "lib/to_png.js": "lib/to_png.browser.js"
-  },
-  "devDependencies": {
-    "istanbul": "^0.4.5",
-    "tape": "4.13.0"
-  },
-  "keywords": [
-    "ancestry",
-    "family",
-    "family tree",
-    "genealogy",
-    "pedigree"
-  ],
-  "license": "MIT",
-  "main": "index.js",
-  "scripts": {
-    "test": "tape lib/**/*.test.js"
-  }
+    "name": "kingraph",
+    "description": "Plots family trees using JavaScript and Graphviz",
+    "version": "0.2.0",
+    "author": "Rico Sta. Cruz <rico@ricostacruz.com> (http://ricostacruz.com); updated by Alexander Willner (https://github.com/AlexanderWillner/kingraph)",
+    "bin": {
+        "kingraph": "bin/kingraph"
+    },
+    "dependencies": {
+        "js-yaml": "3.13.1",
+        "meow": "3.7.0",
+        "object-assign": "4.1.1",
+        "object-loops": "0.8.0",
+        "read-input": "0.3.1",
+        "strip-indent": "3.0.0",
+        "svg2png": "4.1.1",
+        "viz.js": "1.8.1"
+    },
+    "browser": {
+        "lib/to_png.js": "lib/to_png.browser.js"
+    },
+    "devDependencies": {
+        "istanbul": "^0.4.5",
+        "prettier": "^2.4.1",
+        "tape": "4.13.0"
+    },
+    "keywords": [
+        "ancestry",
+        "family",
+        "family tree",
+        "genealogy",
+        "pedigree"
+    ],
+    "license": "MIT",
+    "main": "index.js",
+    "scripts": {
+        "test": "tape lib/**/*.test.js"
+    }
 }
