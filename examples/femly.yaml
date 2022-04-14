@@ -1,0 +1,40 @@
+families:
+  - house: The Frat House Femly
+    parents: [Mackenzie Hayes, Daisy Dukakis, Anita May]
+    children: [Minerva Maat]
+
+  - house: The Pretend Family
+    parents2: [Mackenzie Hayes, Jeffrey Price]
+    children: [Alexandria Bennett]
+
+  - house: Claire Trying to Adopt Minerva
+    parents: [Claire Everly, Mina Price]
+    children2: [Minerva Maat]
+
+  - house: The Baas Family (Minimal)
+    parents: [Sam Baas]
+    parents2: [Dante Wolf]
+    children: [Anita May, Mina Price]
+
+  - house: The SCU Children
+    parents2: [Mackenzie Hayes]
+    children2: [Winston Walker, Flop Dugong]
+
+
+
+people:
+  Balto Connelly:
+    fullname: A Grandpa
+
+  Alexandria Bennett:
+    fullname: Pretend Daughter
+
+  Mackenzie Hayes:
+    fullname: Former Sheriff
+
+  Jeffrey Price:
+    fullname: Former International Arms Dealer
+
+  Minerva Maat:
+    fullname: Wants Her Allowance
+
