@@ -113,6 +113,7 @@ people:
   Ned:
     name: Ned
     fullname: Eddard Stark
+    gender: m | f
     born: 1950
     died: 1966
     picture: ned.jpg
