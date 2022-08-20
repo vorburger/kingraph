@@ -29,7 +29,7 @@ people:
 Use `kingraph` via [this project's Docker Container image](https://github.com/vorburger/kingraph/pkgs/container/kingraph) to transform this YAML e.g. into a SVG:
 
 ```sh
-docker run --rm -v $(pwd):/data ghcr.io/vorburger/kingraph:latest --format=svg family.yaml >family.svg
+docker run --rm -v $(pwd):/data --pull=always ghcr.io/vorburger/kingraph:latest --format=svg family.yaml >family.svg
 open family.svg
 ```
 
