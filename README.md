@@ -10,14 +10,6 @@ A family tree plotter with a very simple syntax. It probably doesn't cover every
 
 ![Example Graph](examples/intro.png)
 
-## Installation
-
-```sh
-npm install -g alexanderwillner/kingraph
-```
-
-This adds the `kingraph` command to your shell. With `kingraph --help` you can get basic information on how to execute the tool.
-
 ## Getting started
 
 A family tree is a [YAML](http://yaml.org/) file. To get started, store the following text in a file called `family.yaml`:
@@ -34,8 +26,18 @@ people:
     fullname: Marjorie Bouvier Simpson
 ```
 
+Use `kingraph` via Docker to transform this YAML e.g. into a SVG:
+
 ```sh
-kingraph family.yaml -F dot | dot -Tpdf -o family.pdf
+docker build -t kingraph .
+docker run --rm -v $(pwd):/data kingraph --format=svg family.yaml >family.svg
+open family.svg
+```
+
+_TODO: You can also generate a PDF: [This does not work, yet.]_
+
+```sh
+docker run --rm -v $(pwd):/data kingraph --format=dot family.yaml | dot -Tpdf -o family.pdf
 open family.pdf
 ```
 
@@ -83,6 +85,13 @@ For further reading:
 - [Advanced usage](docs/advanced.md)
 - [Schema](docs/schema.md)
 
+## Develop
+
+As per the [`Dockerfile`](Dockerfile), you need Node.js, and then in order to locally hack on this code, just do:
+
+    npm install
+    bin/kingraph
+
 ## Thanks
 
 Authored and initially maintained by Rico Sta. Cruz with help from contributors ([list][contributors]).
@@ -91,4 +100,4 @@ Authored and initially maintained by Rico Sta. Cruz with help from contributors 
 > GitHub [@rstacruz](https://github.com/rstacruz) &nbsp;&middot;&nbsp;
 > Twitter [@rstacruz](https://twitter.com/rstacruz)
 
-[contributors]: http://github.com/rstacruz/kingraph/contributors
+[contributors]: http://github.com/vorburger/kingraph/contributors
