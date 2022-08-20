@@ -9,7 +9,7 @@ const cli = require('meow')(`
   Options:
     -h, --help         show usage information
     -v, --version      print version info and exit
-    -F, --format=svg   format (dot, svg)
+    -F, --format=svg   format (dot, svg, png, png-image)
 `, {
     boolean: ['help', 'version'],
     string: ['format'],
