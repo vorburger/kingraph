@@ -34,10 +34,11 @@ docker run --rm -v $(pwd):/data kingraph --format=svg family.yaml >family.svg
 open family.svg
 ```
 
-_TODO: You can also generate a PDF: [This does not work, yet.]_
+You can also generate a PDF:
 
 ```sh
-docker run --rm -v $(pwd):/data kingraph --format=dot family.yaml | dot -Tpdf -o family.pdf
+docker run --rm -v $(pwd):/data kingraph --format=dot family.yaml >family.dot
+dot -Tpdf -o family.pdf family.dot
 open family.pdf
 ```
 
