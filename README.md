@@ -26,18 +26,17 @@ people:
     fullname: Marjorie Bouvier Simpson
 ```
 
-Use `kingraph` via Docker to transform this YAML e.g. into a SVG:
+Use `kingraph` via [this project's Docker Container image](https://github.com/vorburger/kingraph/pkgs/container/kingraph) to transform this YAML e.g. into a SVG:
 
 ```sh
-docker build -t kingraph .
-docker run --rm -v $(pwd):/data kingraph --format=svg family.yaml >family.svg
+docker run --rm -v $(pwd):/data ghcr.io/vorburger/kingraph:latest --format=svg family.yaml >family.svg
 open family.svg
 ```
 
 You can also generate a PDF:
 
 ```sh
-docker run --rm -v $(pwd):/data kingraph --format=dot family.yaml >family.dot
+docker run --rm -v $(pwd):/data ghcr.io/vorburger/kingraph:latest --format=dot family.yaml >family.dot
 dot -Tpdf -o family.pdf family.dot
 open family.pdf
 ```
@@ -92,6 +91,11 @@ As per the [`Dockerfile`](Dockerfile), you need Node.js, and then in order to lo
 
     npm install
     bin/kingraph
+
+To try out the Docker build locally:
+
+    docker build -t kingraph .
+    docker run ... kingraph ... # instead of ghcr.io/vorburger/kingraph:latest
 
 ## Thanks
 
