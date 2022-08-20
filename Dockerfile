@@ -2,7 +2,7 @@ FROM node:18-alpine
 RUN apk add --no-cache git
 
 WORKDIR /usr/local/kingraph
-COPY ["package.json", "package-lock.json*", "yarn.lock", "./"]
+COPY ["package.json", "package-lock.json*", "./"]
 RUN npm install
 COPY "bin/kingraph" "/usr/local/kingraph/bin/kingraph"
 COPY "lib/" "/usr/local/kingraph/lib/"
