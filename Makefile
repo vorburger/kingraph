@@ -18,7 +18,7 @@ lint: lib/*.js
 		eslint "$${file}" ; \
 	done
 
-test: test-tape test-compile-to-png test-compile-to-pdf test-compile-to-svg test-content
+test: test-tape test-compile-to-png test-compile-to-pdf test-compile-to-svg test-content test-container
 
 test-tape:
 ifeq (, $(shell which tape))
@@ -70,3 +70,10 @@ test-content:
 	@./bin/kingraph tests/5_born_died.yaml -F dot > /tmp/kingraph-test && grep 1966 /tmp/kingraph-test >/dev/null && grep 1999 /tmp/kingraph-test >/dev/null && echo "PASS (Search for Content 5)"
 	@./bin/kingraph tests/6_born2.yaml -F dot > /tmp/kingraph-test && grep 1966 /tmp/kingraph-test >/dev/null && echo "PASS (Search for Content 6)"
 	@./bin/kingraph tests/7_image.yaml -F dot > /tmp/kingraph-test && grep image2 /tmp/kingraph-test >/dev/null && echo "PASS (Search for Content 7)"
+
+test-container:
+	docker build -t kingraph .
+	docker run --rm kingraph
+	rm -rf /tmp/kingraph-container-volume && mkdir /tmp/kingraph-container-volume && cp tests/1_simple.yaml /tmp/kingraph-container-volume/family.yaml
+	docker run --rm -v /tmp/kingraph-test-dir:/data kingraph --format=svg family.yaml >/tmp/kingraph-test
+	file /tmp/kingraph-test
