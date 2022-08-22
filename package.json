@@ -12,7 +12,7 @@
         "object-assign": "4.1.1",
         "object-loops": "0.8.0",
         "read-input": "0.3.1",
-        "strip-indent": "3.0.0",
+        "strip-indent": "4.0.0",
         "svg2png": "4.1.1",
         "viz.js": "1.8.1"
     },
