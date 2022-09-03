@@ -26,20 +26,17 @@ people:
     fullname: Marjorie Bouvier Simpson
 ```
 
-Use `kingraph` via [this project's Docker Container image](https://github.com/vorburger/kingraph/pkgs/container/kingraph) to transform this YAML e.g. into a SVG:
+Use `kingraph` via [this project's Docker Container image](https://github.com/vorburger/kingraph/pkgs/container/kingraph) to transform this YAML into a [Graphviz](https://graphviz.org) DOT file, and then that into a SVG and PDF:
 
 ```sh
-docker run --rm -v $(pwd):/data --pull=always ghcr.io/vorburger/kingraph:latest --format=svg family.yaml >family.svg
+docker run --rm -v $(pwd):/data --pull=always ghcr.io/vorburger/kingraph:latest --format=dot family.yaml >family.dot
+dot -Tsvg -o family.svg family.dot
 open family.svg
-```
-
-You can also generate a PDF:
-
-```sh
-docker run --rm -v $(pwd):/data ghcr.io/vorburger/kingraph:latest --format=dot family.yaml >family.dot
 dot -Tpdf -o family.pdf family.dot
 open family.pdf
 ```
+
+You can also try to generate a SVG with `kingraph` directly by using `--format=svg`, but you'll likely [run into memory issues](https://github.com/rstacruz/kingraph/issues/6).
 
 ## Further Examples
 
